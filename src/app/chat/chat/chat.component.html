@@ -1,0 +1,6 @@
+<app-chat-description></app-chat-description>
+<app-chat-stack></app-chat-stack>
+<form [formGroup]="infoForm" *ngIf="infoForm" novalidate (ngSubmit)="sendMessage()">
+  <textarea formControlName="message"></textarea>
+  <button type="submit">Send</button>
+</form>
