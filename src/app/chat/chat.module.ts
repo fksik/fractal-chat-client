@@ -1,5 +1,5 @@
 import {CommonModule} from '@angular/common';
-import {Injector, NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {Injector, NgModule} from '@angular/core';
 import {createCustomElement} from '@angular/elements';
 import {ReactiveFormsModule} from '@angular/forms';
 
@@ -12,8 +12,7 @@ import {ChatAdapterService} from './services/chat-adapter.service';
   declarations: [ChatComponent, ChatStackComponent, ChatDescriptionComponent],
   imports: [CommonModule, ReactiveFormsModule],
   entryComponents: [ChatComponent],
-  providers: [ChatAdapterService],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  providers: [ChatAdapterService]
 })
 export class ChatModule {
   constructor(injector: Injector) {
