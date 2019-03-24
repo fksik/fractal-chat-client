@@ -19,7 +19,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.infoForm = this.fb.group({message: ['']});
     this.listenToMessageChanges();
-    this.chatAdapterService.initilize('https://localhost:8000/chat.io');
+    this.chatAdapterService.initialize('https://localhost:8000/chat.io');
   }
 
   ngOnDestroy(): void {
@@ -28,7 +28,7 @@ export class ChatComponent implements OnInit, OnDestroy {
 
   private listenToMessageChanges(): void {
     this.subscription = this.messageControl.valueChanges.subscribe((msg) => {
-      console.log(msg);
+      this.chatAdapterService.userTyping();
     });
   }
 
