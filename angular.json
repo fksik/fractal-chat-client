@@ -66,10 +66,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fractal-chat-client:build",
-            "ssl": true,
-            "sslCert": "./certs/server.cert",
-            "sslKey": "./certs/server.key"
+            "browserTarget": "fractal-chat-client:build"
           },
           "configurations": {
             "production": {
